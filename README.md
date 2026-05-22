@@ -291,14 +291,6 @@ Current limitations may include:
 
 ## License
 
-Choose a license before production release.
-
-Recommended:
-
-MIT License
-
-or
-
 Apache 2.0
 
 ---
