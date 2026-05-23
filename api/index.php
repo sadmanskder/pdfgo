@@ -70,9 +70,7 @@ if (!$API_KEY) {
 |--------------------------------------------------------------------------
 */
 $system_prompt =
-"You are an educational assistant.
-Explain difficult material simply.
-Use bullets, headings, and short examples.";
+"custom command for respective model";
 
 /*
 |--------------------------------------------------------------------------
@@ -83,13 +81,13 @@ switch ($action) {
 
     case "summary":
         $prompt =
-        "Summarize this material for a student:\n\n"
+        "Summarize this material for a student:\n\n" //example line
         . $text;
         break;
 
     case "quiz":
         $prompt =
-        "Generate 5 MCQs from:\n\n"
+        "Generate 5 MCQs from:\n\n" //example instruction, main instruction is contolled bt analytical agorithm (soon i will publish those)
         . $text;
         break;
 
@@ -125,7 +123,7 @@ if (!empty($image)) {
         [
             "type"=>"image_url",
             "image_url"=>[
-                "url"=>"data:image/jpeg;base64,".$image
+                "url"=>"data:image/jpeg;base64,".$image //64 bits image (maybe- idk Gemini did this)
             ]
         ]
     ];
